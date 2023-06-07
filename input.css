@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-primary:#E2B714; /* replace with your desired color value */
+    --color-secondary:#C2D0C5;
+    --color-third:#65e8ec; 
+  }
+
+
+  
+  
+  @media (min-width: 1024px) {
+    /* Styles for laptops and larger screens */
+    .main {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 1023px) {
+    /* Styles for mobile devices and smaller screens */
+    .main {
+      display: none;
+    }
+    
+    body::before {
+      content: "Open in laptop";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color:#323437;
+      color:var(--color-primary);
+      font-size: 6vw;
+      font-weight: bold;
+    }
+  }
+  
+  
